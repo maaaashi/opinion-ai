@@ -140,13 +140,15 @@
   </div>
 
   <div class="col-span-2 my-5 ml-auto mr-0 w-full md:w-fit">
-    <Button type="submit" disabled={disabled()}>
-      {#if loading}
-        <Spinner class="mr-3" size="4" color="white" />作成中 ...
-      {:else}
-        生成
-      {/if}
-    </Button>
+    <div class="ml-auto mr-0 w-fit">
+      <Button type="submit" disabled={disabled()}>
+        {#if loading}
+          <Spinner class="mr-3" size="4" color="white" />作成中 ...
+        {:else}
+          生成
+        {/if}
+      </Button>
+    </div>
     {#if loading}
       <Helper class="mt-2" color="red">あまりにも返答がない場合は画面を更新して再度お試しください。</Helper>
     {:else if answer}
