@@ -6,7 +6,7 @@
   let title = ''
   let feature = ''
   let occupation = ''
-  let answer_length = 50;
+  let answer_length = 100;
   let answer = ''
   let user_id = uuidv4()
 
@@ -105,7 +105,7 @@
       id="occupation"
       required
       color={color.occupation}
-      placeholder="会社員"
+      placeholder="就活中の大学生"
       type="text"
       bind:value={occupation}
     />
