@@ -139,7 +139,7 @@
     />
   </div>
 
-  <div class="col-span-2 my-5 ml-auto mr-0 w-full md:w-fit">
+  <div class="col-span-2 my-5 ml-auto mr-0 w-full md:w-fit text-right">
     <div class="ml-auto mr-0 w-fit">
       <Button type="submit" disabled={disabled()}>
         {#if loading}
@@ -157,7 +157,9 @@
   </div>
 </form>
 
-{#if answer}
-  <Heading tag="h3">結果</Heading>
-  <Textarea type="field" bind:value={answer} rows="5"/>
+{#if !answer}
+  <div>
+    <Heading tag="h4" class="mb-3">結果</Heading>
+    <Textarea type="field" bind:value={answer} rows="5"/>
+  </div>
 {/if}
