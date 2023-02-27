@@ -157,7 +157,7 @@
   </div>
 </form>
 
-{#if !answer}
+{#if answer}
   <div>
     <Heading tag="h4" class="mb-3">結果</Heading>
     <Textarea type="field" bind:value={answer} rows="5"/>
