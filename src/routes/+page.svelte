@@ -118,7 +118,7 @@
         <FaQuestionCircle />
       </div>
       <Tooltip>
-        インターネット上に情報が少ないものは最大300文字になります
+        インターネット上に情報が少ないものは最大300文字くらいになります
       </Tooltip>
     </Label>
     <NumberInput
