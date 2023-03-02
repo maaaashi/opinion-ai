@@ -16,6 +16,7 @@ specifiers:
   prettier-plugin-svelte: ^2.8.1
   svelte: ^3.54.0
   svelte-check: ^3.0.1
+  svelte-icons: ^2.1.0
   svelte-preprocess: ^4.10.7
   tailwindcss: ^3.1.5
   tslib: ^2.4.1
@@ -29,6 +30,7 @@ dependencies:
   classnames: 2.3.2
   flowbite: 1.6.3
   flowbite-svelte: 0.30.4_gvo3oetiwnc3nogynwkaz6jdxe
+  svelte-icons: 2.1.0
   uuid: 9.0.0
 
 devDependencies:
@@ -1360,6 +1362,10 @@ packages:
     dependencies:
       svelte: 3.55.1
     dev: true
+
+  /svelte-icons/2.1.0:
+    resolution: {integrity: sha512-rHPQjweEc9fGSnvM0/4gA3pDHwyZyYsC5KhttCZRhSMJfLttJST5Uq0B16Czhw+HQ+HbSOk8kLigMlPs7gZtfg==}
+    dev: false
 
   /svelte-preprocess/4.10.7_b25a55hc532q56kmuqlrolam2i:
     resolution: {integrity: sha512-sNPBnqYD6FnmdBrUmBCaqS00RyCsCpj2BG58A1JBswNF7b0OKviwxqVrOL/CKyJrLSClrSeqQv5BXNg2RUbPOw==}

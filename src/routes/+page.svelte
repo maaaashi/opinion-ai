@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { Input, Button, NumberInput, Label, Textarea, Helper, Spinner, Heading } from 'flowbite-svelte';
+  import { Input, Button, NumberInput, Label, Textarea, Helper, Spinner, Tooltip } from 'flowbite-svelte';
+  import FaQuestionCircle from 'svelte-icons/fa/FaQuestionCircle.svelte'
   import supabase from '$lib/supabase';
   import { v4 as uuidv4 } from 'uuid';
 
@@ -111,7 +112,15 @@
     />
   </div>
   <div class="col-span-2 md:col-span-1 mx-1 mt-3">
-    <Label for="answer_length">何文字程度で作りますか？</Label>
+    <Label for="answer_length">
+      何文字程度で作りますか？
+      <div class="inline-block h-4 text-gray-500">
+        <FaQuestionCircle />
+      </div>
+      <Tooltip>
+        インターネット上に情報が少ないものは最大300文字になります
+      </Tooltip>
+    </Label>
     <NumberInput
       id="answer_length"
       required
@@ -159,7 +168,11 @@
 
 {#if answer}
   <div>
-    <Heading tag="h4" class="mb-3">結果</Heading>
+    <div class="flex justify-between">
+      <div class="mb-3 text-2xl font-bold">感想</div>
+      {answer.length}文字
+    </div>
+
     <Textarea type="field" bind:value={answer} rows="5"/>
   </div>
 {/if}

@@ -4,11 +4,12 @@ import supabase from '@libs/supabase';
 const hello = async (event) => {
   const config = new Configuration({ apiKey: process.env.OPENAI_APIKEY});
   const openai = new OpenAIApi(config);
+  const gr = Math.floor(event.answer_length * 0.8)
+  const ls = Math.floor(event.answer_length)
   const request = `
-  質問: あなたの職業は${event.occupation}です。${event.title}についての感想を以下を参考に${event.answer_length}文字程度で作成してください。
+ 質問: あなたの職業は${event.occupation}です。${event.title}についての感想文を以下を参考に${gr}文字以上${ls}文字以下の文字数で作成してください。
   ${event.feature}
-  回答: 
-  `
+  回答: `
   const response = await openai.createCompletion(
     {
       model: "text-davinci-003",
@@ -18,8 +19,6 @@ const hello = async (event) => {
     }
   );
   const answer = response.data.choices[0].text!
-
-  console.log(event.user_id)
 
   await supabase
     .from('opinions')
