@@ -7,9 +7,9 @@ const hello = async (event) => {
   const gr = Math.floor(event.answer_length * 0.8)
   const ls = Math.floor(event.answer_length)
   const request = `
- 質問: あなたの職業は${event.occupation}です。${event.title}についての感想文を以下を参考に${gr}文字以上${ls}文字以下の文字数で作成してください。
-  ${event.feature}
-  回答: `
+質問: あなたの職業は${event.occupation}です。${event.title}についての感想文を以下を参考に${gr}文字以上${ls}文字以下の文字数で作成してください。
+${event.feature}
+回答: `
   const response = await openai.createCompletion(
     {
       model: "text-davinci-003",
