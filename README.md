@@ -1,38 +1,30 @@
-# create-svelte
+# WIP: OpinionAI
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+<div><img src="./doc/main.png" /></div>
 
-## Creating a project
+<div align="center">This system is an opinion generator that employs SvelteKit for the frontend, OpenAI's API for the backend, and AWS StepFunctions and Supabase for the infrastructure.</div>
 
-If you're seeing this, you've probably already done this step. Congrats!
+- [WIP: OpinionAI](#wip-opinionai)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Architecture](#architecture)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+# Installation
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+$ git clone https://github.com/maaaashi/opinion-ai.git
+$ cd opinion-ai
+$ pnpm install
 ```
 
-## Building
-
-To create a production version of your app:
+# Usage
 
 ```bash
-npm run build
+$ pnpm run dev
 ```
 
-You can preview the production build with `npm run preview`.
+Access to http://localhost:3000
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+# Architecture
+
+<div><img src="./doc/structure.drawio.png" /></div>
