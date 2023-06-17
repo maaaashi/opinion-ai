@@ -1,10 +1,10 @@
-# WIP: OpinionAI
+# OpinionAI
 
 <div><img src="./doc/main.png" /></div>
 
 <div align="center">This system is an opinion generator that employs SvelteKit for the frontend, OpenAI's API for the backend, and AWS StepFunctions and Supabase for the infrastructure.</div>
 
-- [WIP: OpinionAI](#wip-opinionai)
+- [OpinionAI](#opinionai)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Architecture](#architecture)
